@@ -13,25 +13,31 @@
         android:id="@+id/linearLayout">
 
         <Button
-            android:layout_height="170dp"
-            android:layout_width="88dp"
-            android:layout_gravity="top"
+            android:id="@+id/b1"
             android:layout_weight="3"
-            android:id="@+id/b1"/>
+            android:layout_gravity="top"
+            android:layout_width="88dp"
+            android:layout_height="170dp"
+            android:textColor="@color/colorB"
+            android:textSize="72dp"/>
 
         <Button
             android:layout_height="170dp"
             android:layout_width="88dp"
             android:layout_gravity="top"
+            android:textColor="@color/colorB"
             android:layout_weight="3"
-            android:id="@+id/b2"/>
+            android:id="@+id/b2"
+            android:textSize="72dp"/>
 
         <Button
             android:layout_height="170dp"
             android:layout_width="88dp"
             android:layout_gravity="top"
+            android:textColor="@color/colorB"
             android:layout_weight="3"
-            android:id="@+id/b3"/>
+            android:id="@+id/b3"
+            android:textSize="72dp"/>
 
     </LinearLayout>
 
@@ -49,21 +55,27 @@
             android:layout_width="88dp"
             android:layout_gravity="center"
             android:layout_weight="3"
-            android:id="@+id/b4"/>
+            android:textColor="@color/colorB"
+            android:id="@+id/b4"
+            android:textSize="72dp"/>
 
         <Button
             android:layout_height="170dp"
             android:layout_width="88dp"
             android:layout_gravity="center"
             android:layout_weight="3"
-            android:id="@+id/b5"/>
+            android:textColor="@color/colorB"
+            android:id="@+id/b5"
+            android:textSize="72dp"/>
 
         <Button
             android:layout_height="170dp"
             android:layout_width="88dp"
             android:layout_gravity="center"
             android:layout_weight="3"
-            android:id="@+id/b6"/>
+            android:id="@+id/b6"
+            android:textColor="@color/colorB"
+            android:textSize="72dp"/>
 
     </LinearLayout>
 
@@ -80,22 +92,70 @@
             android:layout_width="88dp"
             android:layout_gravity="center"
             android:layout_weight="3"
-            android:id="@+id/b7"/>
+            android:id="@+id/b7"
+            android:textColor="@color/colorB"
+            android:textSize="72dp"/>
 
         <Button
             android:layout_height="170dp"
             android:layout_width="88dp"
             android:layout_gravity="center"
             android:layout_weight="3"
-            android:id="@+id/b8"/>
+            android:id="@+id/b8"
+            android:textColor="@color/colorB"
+            android:textSize="72dp"
+            />
 
         <Button
             android:layout_height="170dp"
             android:layout_width="88dp"
             android:layout_gravity="center"
             android:layout_weight="3"
-            android:id="@+id/b9"/>
+            android:id="@+id/b9"
+            android:textColor="@color/colorB"
+            android:textSize="72dp"/>
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reiniciar"
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal"
+            android:onClick="Reiniciar"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/colorB"
+            android:id="@+id/textView_x"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:id="@+id/textView_o"
+            android:textColor="@color/colorB"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

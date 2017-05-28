@@ -1,16 +1,22 @@
 package com.luisfayre.tapjuegoprueba;
 
+import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.os.Build;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button b1, b2, b3, b4, b5, b6, b7, b8, b9;
+    private Button reiniciar;
+    private TextView textView_x, textView_o;
     private int turn;
     private Boolean c1, c2, c3, c4, c5, c6, c7, c8, c9;
 
@@ -31,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
         b8 = (Button) findViewById(R.id.b8);
         b9 = (Button) findViewById(R.id.b9);
 
+
+        textView_x = (TextView) findViewById(R.id.textView_x);
+        textView_o = (TextView) findViewById(R.id.textView_o);
+        reiniciar = (Button) findViewById(R.id.button);
+        reiniciar.setEnabled(false);
+
         turn = 1;
         c1 = false;
         c2 = false;
@@ -43,15 +55,23 @@ public class MainActivity extends AppCompatActivity {
         c9 = false;
 
         b1.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View v) {
                 if (b1.getText().toString().equals("")) {
                     if (turn == 1) {
                         turn = 2;
                         b1.setText("X");
+                        b1.setBackgroundTintList(ContextCompat.getColorStateList(MainActivity.this, R.color.colorX));
+                        textView_o.setText("Turno: O");
+                        textView_x.setText("");
+
                     } else if (turn == 2) {
                         turn = 1;
                         b1.setText("O");
+                        b1.setBackgroundTintList(ContextCompat.getColorStateList(MainActivity.this, R.color.colorO));
+                        textView_x.setText("Turno: X");
+                        textView_o.setText("");
                     }
                 }
                 c1 = true;
@@ -59,15 +79,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View v) {
                 if (b2.getText().toString().equals("")) {
                     if (turn == 1) {
                         turn = 2;
                         b2.setText("X");
+                        b2.setBackgroundTintList(ContextCompat.getColorStateList(MainActivity.this, R.color.colorX));
+                        textView_o.setText("Turno: O");
+                        textView_x.setText("");
                     } else if (turn == 2) {
                         turn = 1;
                         b2.setText("O");
+                        b2.setBackgroundTintList(ContextCompat.getColorStateList(MainActivity.this, R.color.colorO));
+                        textView_x.setText("Turno: X");
+                        textView_o.setText("");
                     }
                 }
                 c2 = true;
@@ -75,15 +102,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         b3.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View v) {
                 if (b3.getText().toString().equals("")) {
                     if (turn == 1) {
                         turn = 2;
                         b3.setText("X");
+                        textView_o.setText("Turno: O");
+                        textView_x.setText("");
+                        b3.setBackgroundTintList(ContextCompat.getColorStateList(MainActivity.this, R.color.colorX));
                     } else if (turn == 2) {
                         turn = 1;
                         b3.setText("O");
+                        b3.setBackgroundTintList(ContextCompat.getColorStateList(MainActivity.this, R.color.colorO));
+                        textView_x.setText("Turno: X");
+                        textView_o.setText("");
                     }
                 }
                 c3 = true;
@@ -91,15 +125,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         b4.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View v) {
                 if (b4.getText().toString().equals("")) {
                     if (turn == 1) {
                         turn = 2;
                         b4.setText("X");
+                        textView_o.setText("Turno: O");
+                        textView_x.setText("");
+                        b4.setBackgroundTintList(ContextCompat.getColorStateList(MainActivity.this, R.color.colorX));
                     } else if (turn == 2) {
                         turn = 1;
                         b4.setText("O");
+                        b4.setBackgroundTintList(ContextCompat.getColorStateList(MainActivity.this, R.color.colorO));
+                        textView_x.setText("Turno: X");
+                        textView_o.setText("");
                     }
                 }
                 c4 = true;
@@ -107,15 +148,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         b5.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View v) {
                 if (b5.getText().toString().equals("")) {
                     if (turn == 1) {
                         turn = 2;
                         b5.setText("X");
+                        textView_o.setText("Turno: O");
+                        textView_x.setText("");
+                        b5.setBackgroundTintList(ContextCompat.getColorStateList(MainActivity.this, R.color.colorX));
                     } else if (turn == 2) {
                         turn = 1;
                         b5.setText("O");
+                        b5.setBackgroundTintList(ContextCompat.getColorStateList(MainActivity.this, R.color.colorO));
+                        textView_x.setText("Turno: X");
+                        textView_o.setText("");
                     }
                 }
                 c5 = true;
@@ -123,15 +171,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         b6.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View v) {
                 if (b6.getText().toString().equals("")) {
                     if (turn == 1) {
                         turn = 2;
                         b6.setText("X");
+                        textView_o.setText("Turno: O");
+                        textView_x.setText("");
+                        b6.setBackgroundTintList(ContextCompat.getColorStateList(MainActivity.this, R.color.colorX));
                     } else if (turn == 2) {
                         turn = 1;
                         b6.setText("O");
+                        b6.setBackgroundTintList(ContextCompat.getColorStateList(MainActivity.this, R.color.colorO));
+                        textView_x.setText("Turno: X");
+                        textView_o.setText("");
                     }
                 }
                 c6 = true;
@@ -139,15 +194,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         b7.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View v) {
                 if (b7.getText().toString().equals("")) {
                     if (turn == 1) {
                         turn = 2;
                         b7.setText("X");
+                        textView_o.setText("Turno: O");
+                        textView_x.setText("");
+                        b7.setBackgroundTintList(ContextCompat.getColorStateList(MainActivity.this, R.color.colorX));
                     } else if (turn == 2) {
                         turn = 1;
                         b7.setText("O");
+                        b7.setBackgroundTintList(ContextCompat.getColorStateList(MainActivity.this, R.color.colorO));
+                        textView_x.setText("Turno: X");
+                        textView_o.setText("");
                     }
                 }
                 c7 = true;
@@ -155,15 +217,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         b8.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View v) {
                 if (b8.getText().toString().equals("")) {
                     if (turn == 1) {
                         turn = 2;
                         b8.setText("X");
+                        textView_o.setText("Turno: O");
+                        textView_x.setText("");
+                        b8.setBackgroundTintList(ContextCompat.getColorStateList(MainActivity.this, R.color.colorX));
                     } else if (turn == 2) {
                         turn = 1;
                         b8.setText("O");
+                        b8.setBackgroundTintList(ContextCompat.getColorStateList(MainActivity.this, R.color.colorO));
+                        textView_x.setText("Turno: X");
+                        textView_o.setText("");
                     }
                 }
                 c8 = true;
@@ -171,15 +240,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         b9.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View v) {
                 if (b9.getText().toString().equals("")) {
                     if (turn == 1) {
                         turn = 2;
                         b9.setText("X");
+                        textView_o.setText("Turno: O");
+                        textView_x.setText("");
+                        b9.setBackgroundTintList(ContextCompat.getColorStateList(MainActivity.this, R.color.colorX));
                     } else if (turn == 2) {
                         turn = 1;
                         b9.setText("O");
+                        b9.setBackgroundTintList(ContextCompat.getColorStateList(MainActivity.this, R.color.colorO));
+                        textView_x.setText("Turno: X");
+                        textView_o.setText("");
                     }
                 }
                 c9 = true;
@@ -293,6 +369,7 @@ public class MainActivity extends AppCompatActivity {
             b7.setEnabled(false);
             b8.setEnabled(false);
             b9.setEnabled(false);
+            reiniciar.setEnabled(true);
 
             new AlertDialog.Builder(this)
                     .setTitle("Fin del juego")
@@ -307,11 +384,14 @@ public class MainActivity extends AppCompatActivity {
                     .setNegativeButton("No", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            finish();
+                            reiniciar.setEnabled(true);
                         }
                     })
                     .show();
         }
     }
 
+    public void Reiniciar(View view) {
+        recreate();
+    }
 }
